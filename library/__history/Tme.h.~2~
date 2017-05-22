@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+#ifndef TmeH
+#define TmeH
+//---------------------------------------------------------------------------
+class  Tme : public TComponent
+{
+	private:
+		TPanel *FPanel;
+		TShape *FShapeLamp;
+		TComboBox *FComboBox;
+
+
+	protected:  //User declarations
+	public:
+		__fastcall  Tme(TComponent *Owner);
+		__fastcall  ~Tme(void);
+
+		void __fastcall set_ShapeProperty(TWinControl *PanelParent,TShapeType Type,TColor PenColor,
+						TColor BrushColor,int PenWidth,int TShapeHeight,int TShapeWidth);
+		void __fastcall set_ShapePosition(int Top,int Left);
+
+		void __fastcall set_ComboBoxProperty(TWinControl *PanelParent,UnicodeString Text,int FontSize,int Left,int Top);
+		void __fastcall set_ComboBoxItem(TStrings *Item);
+
+
+
+};
+//---------------------------------------------------------------------------
+#endif

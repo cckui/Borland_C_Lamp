@@ -1,0 +1,61 @@
+//---------------------------------------------------------------------------
+
+#ifndef frmMainH
+#define frmMainH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+//---------------------------------------------------------------------------
+class Tme;
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TPanel *PanelTimer;
+	TGroupBox *GroupTimer;
+	TGroupBox *GroupThread;
+	TPanel *PanelThread;
+	TTimer *Timer1;
+	TShape *TShapeTimerRed;
+	TShape *TShapeTimerYellow;
+	TShape *TShapeTimerGreen;
+	TEdit *TEditYellow;
+	TEdit *TEditGreen;
+	TEdit *TEditRed;
+	TGroupBox *GroupBox1;
+	TGroupBox *GroupBox2;
+	TButton *Btn_Timer_Start;
+	TButton *Btn_Timer_Stop;
+	TButton *Btn_Thread_Start;
+	TButton *Btn_Thread_Stop;
+	TEdit *Edit1;
+	TEdit *Edit2;
+	TEdit *Edit3;
+	TButton *Button1;
+	void __fastcall FormActivate(TObject *Sender);
+	void __fastcall Timer1Timer(TObject *Sender);
+	void __fastcall Btn_Timer_StartClick(TObject *Sender);
+	void __fastcall Button1Click(TObject *Sender);
+
+private:	// User declarations
+	Tme	*FLampRed;
+	Tme	*FLampGreen;
+	Tme	*FLampYellow;
+
+	Tme *FComboBoxRed;
+	Tme *FComboBoxGreen;
+	Tme *FComboBoxYellow;
+
+	Tme *FLamp;
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+
+
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif

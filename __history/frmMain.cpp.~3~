@@ -1,0 +1,47 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "frmMain.h"
+#include "Tme.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	FLampRed = new Tme(this);
+	FLampGreen = new Tme(this);
+	FLampYellow = new Tme(this);
+
+	FComboBoxRed = new Tme(this);
+	FComboBoxYellow = new Tme(this);
+	FComboBoxGreen = new Tme(this);
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::FormActivate(TObject *Sender)
+{
+	FLampRed->set_ShapeProperty(PanelThread,stCircle,clBlue,clRed,5,130,130);
+	FLampRed->set_ShapePosition(15,30);
+
+	FLampYellow->set_ShapeProperty(PanelThread,stCircle,clBlue,clYellow,5,130,130);
+	FLampYellow->set_ShapePosition(15,30+160);
+
+	FLampGreen->set_ShapeProperty(PanelThread,stCircle,clBlue,clGreen,5,130,130);
+	FLampGreen->set_ShapePosition(15,30+320);
+
+	FComboBoxRed->set_ComboBoxProperty(GroupThread,5,12,40,190);
+	FComboBoxYellow->set_ComboBoxProperty(GroupThread,5,12,202,190);
+	FComboBoxGreen->set_ComboBoxProperty(GroupThread,5,12,366,190);
+
+	//FLampRed->Visible=False;
+
+	//Shape1->Sha
+
+	//FComboBoxRed->set_ComboBoxItem("A");
+}
+//---------------------------------------------------------------------------
+

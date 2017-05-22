@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/05/09 11:49:23.000.009,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2017/05/09 11:49:23.000.022,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2017/05/09 11:49:36.000.260,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\frmMain.cpp=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2017/05/09 11:49:36.000.260,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\frmMain.h=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>2017/05/09 11:49:36.000.260,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\frmMain.dfm=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2017/05/09 11:50:02.000.108,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\RGBLampPCH1.h=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2017/05/09 11:50:07.000.278,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\RGBLamp.cbproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2017/05/09 11:53:00.000.556,=E:\20170504_RGB20170504\RGBLamp\library\Tme.cpp</Transaction>
+    <Transaction>2017/05/09 11:53:09.000.597,=E:\20170504_RGB20170504\RGBLamp\library\TModuleThread.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

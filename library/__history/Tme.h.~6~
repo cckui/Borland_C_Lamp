@@ -1,0 +1,57 @@
+//---------------------------------------------------------------------------
+#include "TModuleThread.h"
+#ifndef TmeH
+#define TmeH
+//---------------------------------------------------------------------------
+class  Tme : public TComponent
+{
+	private:
+		TPanel *FPanel;
+		TShape *FShapeLamp;
+		TComboBox *FComboBox;
+
+	//=================== 顯示執行緒宣告 >>>>>>>>>>>>>>>>>>>>
+	HANDLE hMainCntShowHandle;     // bSynchronize = true ;
+	TModuleThread * MainCntShowThread;
+	void __fastcall DoMainCntShowEvent(TObject* Sender);
+	bool bMainCntShowThreadRunSet ;
+
+	HANDLE hMainShowHandle;          // bSynchronize = false ;
+	TModuleThread * MainShowThread;
+	void __fastcall DoMainShowEvent(TObject* Sender);
+	void __fastcall EditItemShow(void);
+	bool bMainShowClose ;
+
+	int FSystemTimeBase ;
+
+	int Red_Time;
+	int Yellow_Time;
+	int Green_Time;
+	TColor Lamp_Color;
+	TColor Now_Lamp_Color;
+
+	//=======================================<<<<<<<<<<<<<<<<<
+
+	protected:  //User declarations
+	public:
+		__fastcall  Tme(TComponent *Owner);
+		__fastcall  ~Tme(void);
+
+		void __fastcall set_ShapeProperty(TWinControl *PanelParent,TShapeType Type,TColor PenColor,
+						TColor BrushColor,int PenWidth,int TShapeHeight,int TShapeWidth);
+		void __fastcall set_ShapePosition(int Top,int Left);
+
+		void __fastcall set_ComboBoxProperty(TWinControl *PanelParent,UnicodeString Text,int FontSize,int Left,int Top);
+		void __fastcall set_ComboBoxItem(TStrings *Item);
+		void __fastcall set_ShapeColor(TColor Color);
+		void __fastcall set_ThreadStasrt(void);
+		void __fastcall set_ThreadStop(void);
+
+		void __fastcall lamp_start(TColor color,int Red,int Yellow,int Green);
+		void __fastcall lamp_stop(void);
+
+
+
+};
+//---------------------------------------------------------------------------
+#endif
